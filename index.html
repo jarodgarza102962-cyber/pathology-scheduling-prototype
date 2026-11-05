@@ -5462,9 +5462,6 @@
 
                         <!-- 3. 排班规则维护 (线框按钮) -->
                         <button type="button" class="btn btn-default" style="height: 28px; font-size: 12px; color: #303133; border: 1px solid #dcdfe6; background: #ffffff; border-radius: 3px; padding: 0 12px; cursor: pointer;" onclick="openConfigModal()">排班规则维护</button>
-
-                        <!-- 4. 导出 Excel (线框按钮) -->
-                        <button type="button" class="btn btn-default" style="height: 28px; font-size: 12px; color: #303133; border: 1px solid #dcdfe6; background: #ffffff; border-radius: 3px; padding: 0 12px; cursor: pointer;" onclick="exportExcel()">导出 Excel</button>
                     </div><!-- 右侧：筛选条件区（时间区间 + 快捷周期 + 专业组 + 人员） -->
                     <div class="filters-right" style="display: flex; align-items: center; gap: 10px;">
                         <!-- 视图模式切换：按日 / 按月 (Segmented Control) -->
@@ -6117,19 +6114,19 @@
 
     <!-- ================= 弹窗：新增 / 编辑岗位大类 (ruleGroupModal) ================= -->
     <div class="modal-overlay" id="ruleGroupModal" onclick="closeRuleGroupModal(event)" style="display:none;z-index:2300;">
-        <div class="selector-modal-card" onclick="event.stopPropagation()" style="width:480px; max-width:92vw; border-radius:4px; box-shadow:0 6px 24px rgba(0,0,0,0.2);">
-            <div class="selector-modal-header" style="height:46px; position:relative; display:flex; align-items:center; justify-content:center; padding:0 18px; border-bottom:1px solid #ebeef5; background:#fafbfc;">
+        <div class="selector-modal-card" onclick="event.stopPropagation()" style="width:460px; max-width:92vw; height:auto !important; min-height:unset; border-radius:4px; box-shadow:0 6px 24px rgba(0,0,0,0.2);">
+            <div class="selector-modal-header" style="height:44px; position:relative; display:flex; align-items:center; justify-content:center; padding:0 18px; border-bottom:1px solid #ebeef5; background:#fafbfc;">
                 <strong id="ruleGroupModalTitle" style="font-size:15px; font-weight:600; color:#303133; text-align:center;">新增岗位大类</strong>
                 <button type="button" class="selector-modal-close" onclick="closeRuleGroupModal()" style="position:absolute; right:16px; top:50%; transform:translateY(-50%); border:0; background:transparent; font-size:20px; color:#909399; cursor:pointer; line-height:1;">×</button>
             </div>
-            <div style="padding:22px 24px; display:flex; flex-direction:column; gap:16px; font-size:13px;">
+            <div style="padding:18px 24px 16px 24px; display:flex; flex-direction:column; gap:14px; font-size:13px;">
                 <input type="hidden" id="ruleGroupEditId" value="">
                 <label style="display:flex; align-items:center; gap:12px;">
-                    <span style="width:95px; text-align:right; color:#303133;"><span style="color:#f56c6c;">*</span> 大类名称</span>
+                    <span style="width:80px; text-align:right; color:#303133;"><span style="color:#f56c6c;">*</span> 大类名称</span>
                     <input id="ruleGroupNameInput" style="flex:1; height:32px; border:1px solid #dcdfe6; border-radius:3px; padding:0 10px; font-size:13px;" placeholder="请输入大类名称">
                 </label>
                 <div style="display:flex; align-items:center; gap:12px;">
-                    <span style="width:95px; text-align:right; color:#303133;"><span style="color:#f56c6c;">*</span> 兼任属性</span>
+                    <span style="width:80px; text-align:right; color:#303133;"><span style="color:#f56c6c;">*</span> 兼任属性</span>
                     <div style="flex:1; display:flex; align-items:center; gap:18px;">
                         <label style="display:flex; align-items:center; gap:6px; cursor:pointer; font-size:13px; color:#303133;">
                             <input type="radio" name="ruleGroupEnabledRadio" id="radioEnabledTrue" value="true" checked>
@@ -6142,7 +6139,7 @@
                     </div>
                 </div>
             </div>
-            <div class="selector-modal-footer" style="height:48px; border-top:1px solid #ebeef5; padding:0 18px; display:flex; align-items:center; justify-content:flex-end; gap:10px; background:#fafbfc;">
+            <div class="selector-modal-footer" style="height:46px; border-top:1px solid #ebeef5; padding:0 18px; display:flex; align-items:center; justify-content:flex-end; gap:10px; background:#fafbfc;">
                 <button type="button" class="btn btn-default" onclick="closeRuleGroupModal()" style="height:28px; padding:0 14px; border:1px solid #dcdfe6; background:#fff; border-radius:3px; cursor:pointer;">取消</button>
                 <button type="button" class="btn btn-blue" style="background:#008fd5; color:#fff; border:0; border-radius:3px; height:28px; padding:0 18px; cursor:pointer; font-weight:500;" onclick="saveRuleGroupModal()">确定保存</button>
             </div>
